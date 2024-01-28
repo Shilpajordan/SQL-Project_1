@@ -48,3 +48,32 @@ SELECT year ,MAX(num) AS max_num
 FROM baby_names
 WHERE sex = 'M'
 GROUP BY year;
+
+-- Task 7
+SELECT b.year, b.first_name, b.num
+FROM baby_names AS b
+INNER JOIN (
+SELECT year ,MAX(num) AS max_num
+FROM baby_names
+WHERE sex = 'M'
+GROUP BY year) AS a
+ON a.year = b.year
+AND a.max_num = b.num
+ORDER BY year DESC;
+
+-- Task 8
+WITH top_male_names AS (
+    SELECT b.year, b.first_name, b.num
+    FROM baby_names AS b
+    INNER JOIN (
+    SELECT year ,MAX(num) AS max_num
+    FROM baby_names
+    WHERE sex = 'M'
+    GROUP BY year) AS a
+    ON a.year = b.year
+    AND a.max_num = b.num
+    ORDER BY year DESC)
+SELECT first_name, COUNT(first_name) as count_top_name
+FROM top_male_names
+GROUP BY first_name
+ORDER BY COUNT(first_name) DESC;

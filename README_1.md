@@ -42,3 +42,17 @@ Write a query that selects the year and the maximum num of babies given any male
 
 - Select the year and the maximum num of babies given any one male name in that year; alias the maximum as max_num.
 - Filter the data to include only results where sex equals 'M'.
+
+### Task 7: Instructions
+Using the previous task's code as a subquery, look up the first_name that corresponds to the maximum number of babies given a specific male name in a year.
+
+- Select year, the first_name given to the largest number of male babies, and num of babies given the first_name that year.
+- Join baby_names to the code in the last task as a subquery, using whatever alias you like and joining on both columns in the subquery.
+- Order the results by year, starting with the most recent year.
+
+### Task 8: Instructions
+Return a list of first names that have been the top male first name in any year along with a count of the number of years that name has been the top name.
+
+- Select first_name and a count of the number of years that the first_name appeared as a year's top name in the last task; alias this count as count_top_name.
+- To do this, use the code from the previous task as a common table expression.
+- Group by first_name and order the results from the name with the most years at the top to the name with the fewest.
