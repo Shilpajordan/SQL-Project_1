@@ -26,3 +26,25 @@ FROM baby_names
 WHERE sex = 'F'
 GROUP BY first_name
 LIMIT 10;
+
+-- Task 4
+SELECT first_name
+FROM baby_names
+WHERE sex = 'F' 
+AND year > 2015
+AND first_name LIKE '%a'
+GROUP BY first_name
+ORDER BY SUM(num) DESC;
+
+-- Task 5
+SELECT year, first_name, num,
+SUM(num) OVER(ORDER BY year) AS cumulative_olivias
+FROM baby_names
+WHERE first_name = 'Olivia'
+ORDER BY year;
+
+-- Task 6
+SELECT year ,MAX(num) AS max_num
+FROM baby_names
+WHERE sex = 'M'
+GROUP BY year;

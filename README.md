@@ -1,5 +1,5 @@
-# SQL-Project_1
-Analyzing American Baby Name Trends
+# SQL-Project_1 
+Analyzing American Baby Name Trends 
 ## Project Description
 What makes a name timeless or trendy? In this project, you'll use data published by the U.S. Social Security Administration spanning over a hundred years to understand American baby name tastes.
 

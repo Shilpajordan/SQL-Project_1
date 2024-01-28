@@ -21,3 +21,24 @@ Let's take a look at the ten highest-ranked American female names in our dataset
 - RANK the first_name by the sum of babies who've ever had that name, aliasing as name_rank and showing the names in descending order by name_rank.
 - Filter the data to include only results where sex equals 'F'.
 - Limit to ten results.
+
+### Task 4: Instructions
+Return a list of first names which meet this friend's baby name criteria.
+
+- Select only the first_name column.
+- Filter the data for results where sex equals 'F', the year is greater than 2015, and the first_name ends in an 'a.'
+- Group the data by first_name and order by the total number of babies ever given that first_name, descending.
+
+### Task 5: Instructions
+Find the cumulative number of babies named Olivia over the years since the name first appeared in our dataset.
+
+- Select year, first_name, num of Olivias in that year, and cumulative_olivias.
+- Using a window function, sum the cumulative number of babies who have ever been named Olivia up to that year; alias as cumulative_olivias.
+- Filter the results so that only data for the name Olivia is returned.
+- Order the results by year from the earliest year Olivia appeared in the dataset to the most recent.
+
+### Task 6: Instructions
+Write a query that selects the year and the maximum num of babies given any male name in that year.
+
+- Select the year and the maximum num of babies given any one male name in that year; alias the maximum as max_num.
+- Filter the data to include only results where sex equals 'M'.
